@@ -177,6 +177,43 @@
         </div>
     </section>
 
+<section>
+    <h1>円グラフ</h1>
+  <canvas id="myPieChart"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+  
+  <script>
+  var ctx = document.getElementById("myPieChart");
+  var myPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ["Ski", "Snowboard"],
+      datasets: [{
+          backgroundColor: [
+              "#BB5179",
+              "#FAFF67",
+              "#58A27C",
+              "#3C00FF"
+          ],
+          data: [40, 60, 0, 0]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Ratio of ski/snowboard'
+      }
+    }
+  });
+  </script>
+</section>
+
+
+
+
+
+
+
     <div class="container">
         <section>
             <div>
@@ -222,7 +259,7 @@
         <section>
             <div>
                 <h2>Information</h2>
-                <p>Official HP: https://www.muikamachi.com/ski/<br>
+                <p>Official HP:<a href=" https://www.muikamachi.com/ski/" target="_blank">Muika resort</a><br>
                     Email: info@muikasnowresort.jp<br>
                     Phone: +81-123-456-789<br>
                     Address: 123 Muika Snow Resort Road, Minamiuonuma, Niigata, Japan</p>
